@@ -8,7 +8,7 @@ class Conta
         @saldo = saldo
     end
     def sacar(valor)
-        if (saldo >= valor)
+        if saldo >= valor
             self.saldo -= valor
         else
             puts "Saldo insuficiente."
