@@ -6,4 +6,13 @@ class ContaCorrente < Conta
         super(numero, titular, saldo)
         @limite = limite
     end
+    def sacar(valor)
+        if (saldo + limite) >= valor
+            self.saldo -= valor
+        else
+            puts "Saldo insufciciente."
+        end
+        
+    end
+    
 end
