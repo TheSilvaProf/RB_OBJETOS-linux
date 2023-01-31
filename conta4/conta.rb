@@ -22,9 +22,6 @@ class Conta
             c_dest.depositar(valor)
         else
             puts "Saldo insuficiente." 
-        end       
-        
-    end
-    
-    
+        end               
+    end   
 end
