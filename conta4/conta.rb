@@ -18,7 +18,7 @@ class Conta
     end
     def transferir(c_dest, valor)
         if saldo >= valor
-            self.saldo -= valor
+            sacar(valor)
             c_dest.depositar(valor)
         else
             puts "Saldo insuficiente." 
