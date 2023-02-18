@@ -7,5 +7,9 @@ class Conta
         @titular = titular
         @saldo = saldo
     end
+    def depositar(valor)
+        self.saldo += valor
+    end
+    
     
 end
