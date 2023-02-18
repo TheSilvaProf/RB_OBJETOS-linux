@@ -10,6 +10,14 @@ class Conta
     def depositar(valor)
         self.saldo += valor
     end
+    def sacar(valor)
+        if saldo >= valor
+            self.saldo -= valor
+        else
+            puts "Saldo insuficiente."
+        end
+        
+    end
     
     
 end
