@@ -1,3 +1,5 @@
+require_relative "cliente"
+
 class Conta
     attr_reader :numero, :titular
     attr_accessor :saldo
@@ -16,7 +18,14 @@ class Conta
         else
             puts "Saldo insuficiente."
         end
-        
+    end
+    def transferir(c_destino, valor)
+        if saldo >= valor
+            sacar(valor)
+            c_destino.depositar(valor)
+        else
+            puts "Saldo insuficiente."
+        end
     end
     
     
